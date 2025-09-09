@@ -1,0 +1,4 @@
+*.tar.gz
+*.deb
+*.log
+DSKEYS/

@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  e-imzo:
+    build:
+      context: .
+    container_name: e-imzo
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./DSKEYS:/media/DSKEYS
+    network_mode: host
+    restart: unless-stopped
